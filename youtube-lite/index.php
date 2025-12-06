@@ -2,7 +2,7 @@
 $iframe_url = null;
 $message = "";
 $search_query = isset($_POST['search']) ? trim($_POST['search']) : '';
-$api_key = 'AIzaSyA3ojztcYc5xHXBk_GpzYdYE2irCLsxmqc'; // Replace with your key
+$api_key = 'YOUR_API_KEY'; // Replace with your key
 $home_videos = [];
 
 // Function to fetch videos via YouTube API
