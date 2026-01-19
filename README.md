@@ -1,136 +1,101 @@
 
+# 📺 TV YouTube Lite
+### A lightweight, PHP-based YouTube client optimized for legacy Smart TVs.
 
-# TV YouTube Lite — Lightweight YouTube Client for Older Smart TVs
+[![PHP Version](https://img.shields.io/badge/php-%5E7.4%20%7C%208.x-777bb4.svg)](https://www.php.net/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fswastik45%2Egithub%2Eio%2FProtfolio%2F&urlhash=VGbg&isSdui=true
+Modern YouTube updates often make older Smart TVs slow, incompatible, or unable to play videos due to high RAM/CPU usage. **TV YouTube Lite** solves this by providing a high-speed, server-side alternative that works on almost any TV browser.
 
-TV YouTube Lite is a minimal, fast, and TV-optimized YouTube client built for older or low-spec smart TVs where the official YouTube app has become slow, laggy, or completely unusable due to new updates.
-This project focuses on speed, simplicity, and smooth playback.
-
----
-
-## Why This Exists
-
-Modern YouTube updates often make older TVs slow, incompatible, or unable to play videos properly. Common issues include:
-
-* Laggy UI
-* Slow loading
-* RAM/CPU overload
-* Videos not playing
-* Forced high-resolution buffering
-
-This project solves those problems by providing a lightweight alternative that works smoothly on almost any TV browser.
+[**View Developer Portfolio**](https://swastik45.github.io/Protfolio/)
 
 ---
 
-## Features
+## 🚀 Why This Exists
+Older Smart TVs often struggle with the official YouTube app due to:
+* **Laggy UI:** Heavy JavaScript frameworks used in modern apps.
+* **Buffering:** Forced high-resolution playback that exceeds hardware limits.
+* **Crashes:** High RAM consumption from modern web standards.
 
-### • Search
+**TV YouTube Lite** shifts the processing load to the server, delivering clean HTML/CSS that even low-spec TVs can render smoothly.
 
-Search for videos by name using the YouTube Data API.
+---
 
-### • Home/Trending Feed
+## ✨ Features
+* **⚡ Zero JavaScript Overhead:** Built with PHP + HTML to ensure compatibility with weak TV browser engines.
+* **📉 Low-Res Optimization:** Automatically forces `vq=small` in embeds for faster buffering and smooth playback.
+* **🔍 Search & Discovery:** Search via the YouTube Data API or browse the Trending feed by default.
+* **🛡️ Privacy-First:** Uses `youtube-nocookie.com` to reduce tracking and improve performance.
+* **📱 Minimalist UI:** Clean grid layout with large thumbnails designed for distance viewing.
 
-If no search query is entered, the app shows trending videos based on region.
+---
 
-### • Low-Resolution Playback (TV-Friendly)
+## 🛠️ Tech Stack
+* **Language:** PHP (Native)
+* **API:** YouTube Data API v3
+* **Frontend:** Semantic HTML5 / CSS3
+* **Dependencies:** None (No frameworks, no libraries)
 
-Videos play through the **YouTube No-Cookie embed** using:
+---
+
+## 🔧 Installation & Setup
+
+1. **Clone the Project:**
+   ```bash
+   git clone [https://github.com/your-username/tv-youtube-lite.git](https://github.com/your-username/tv-youtube-lite.git)
+   cd tv-youtube-lite
 
 ```
-vq=small
-```
 
-This forces lower resolution for:
-
-* faster buffering
-* smooth playback on slow TVs
-* low data usage
-
-### • Minimal UI
-
-Clean grid layout, thumbnails only, no unnecessary scripts.
-
-### • Zero JavaScript Overhead
-
-Everything works with PHP + HTML.
-Perfect for weak TV browsers.
-
-### • Privacy-Optimized
-
-Uses nocookie embeds to reduce tracking.
-
----
-
-## Tech Stack
-
-* PHP
-* YouTube Data API v3
-* HTML/CSS
-* No frameworks, no JavaScript required
-
----
-
-## Code Overview
-
-### `fetch_videos()`
-
-A reusable function that:
-
-* Handles YouTube search queries
-* Loads trending videos
-* Extracts video ID, title, thumbnails
-* Uses `@file_get_contents()` safely
-* Parses data using `json_decode()`
-
-### Video Playback
-
-Selecting a video adds:
+2. **Add Your API Key:**
+Open the file and insert your [YouTube Data API Key](https://console.cloud.google.com/):
+```php
+$api_key = 'YOUR_API_KEY_HERE';
 
 ```
-?video=VIDEO_ID
+
+
+3. **Run Locally:**
+```bash
+php -S localhost:8000
+
 ```
 
-The video then loads in a lightweight embed iframe.
 
-### Input Safety
-
-All output is sanitized using `htmlspecialchars()` to prevent XSS attacks.
+Point your TV browser to `http://your-computer-ip:8000`.
 
 ---
 
-## How to Run
+## 📂 Architecture Overview
 
-1. Install PHP if not installed.
-2. Add your YouTube API key inside the file:
+### Video Fetching
 
-   ```php
-   $api_key = 'YOUR_API_KEY';
-   ```
-3. Start a local server:
+The `fetch_videos()` function handles API requests server-side. It safely parses data using `json_decode()` and returns only the necessary metadata (ID, Title, Thumbnail), reducing the payload sent to the TV.
 
-   ```
-   php -S localhost:8000
-   ```
-4. Open:
+### Playback Logic
 
-   ```
-   http://localhost:8000
-   ```
+When a video is selected, the app appends `?video=VIDEO_ID` to the URL. The server then generates a lightweight IFrame embed:
+
+* **No-Cookie Domain:** Reduces data overhead.
+* **Forced Quality:** Appends parameters to ensure the TV hardware isn't overwhelmed by 4K/1080p streams.
+
+### Security
+
+All output is passed through `htmlspecialchars()` to ensure the application is protected against XSS attacks, even in older browser environments.
 
 ---
 
-## Deployment
+## 🌐 Deployment
 
-Works on:
+This project is "plug-and-play" and works on:
 
-* Shared hosting
-* VPS (Apache/Nginx)
-* Local server on TV browser
-* Any lightweight PHP environment
+* **Shared Hosting:** (Bluehost, HostGator, etc.)
+* **Local Servers:** (Raspberry Pi, XAMPP, WAMP)
+* **VPS:** (DigitalOcean, Linode running Apache/Nginx)
 
-No dependencies. No builds. No installation required.
+---
 
+## 🤝 Contributing
 
+Feel free to fork this project to add CSS improvements for specific TV aspect ratios or to implement better remote-control (D-pad) navigation.
 
-If you want, I can generate a shorter version, a more “GitHub-professional” tone, or a marketing-style version.
