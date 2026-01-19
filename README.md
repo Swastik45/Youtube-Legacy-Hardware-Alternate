@@ -2,6 +2,7 @@
 
 # TV YouTube Lite — Lightweight YouTube Client for Older Smart TVs
 
+
 TV YouTube Lite is a minimal, fast, and TV-optimized YouTube client built for older or low-spec smart TVs where the official YouTube app has become slow, laggy, or completely unusable due to new updates.
 This project focuses on speed, simplicity, and smooth playback.
 
