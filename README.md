@@ -7,7 +7,7 @@
 
 Modern YouTube updates often make older Smart TVs slow, incompatible, or unable to play videos due to high RAM/CPU usage. **TV YouTube Lite** solves this by providing a high-speed, server-side alternative that works on almost any TV browser.
 
-[**View Developer Portfolio**](https://swastik45.github.io/Protfolio/)
+[**View Live  Project**](https://youtube-clone.kesug.com/?i=1)
 
 ---
 
