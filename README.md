@@ -94,8 +94,3 @@ This project is "plug-and-play" and works on:
 * **VPS:** (DigitalOcean, Linode running Apache/Nginx)
 
 ---
-
-## 🤝 Contributing
-
-Feel free to fork this project to add CSS improvements for specific TV aspect ratios or to implement better remote-control (D-pad) navigation.
-
