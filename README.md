@@ -94,5 +94,3 @@ This project is "plug-and-play" and works on:
 * **VPS:** (DigitalOcean, Linode running Apache/Nginx)
 
 ---
-** Works On**
-Tv below any versions
