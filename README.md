@@ -2,7 +2,7 @@
 # 📺 TV YouTube Lite
 ### A lightweight, PHP-based YouTube client optimized for legacy Smart TVs.
 
-[![PHP Version](https://img.shields.io/badge/php-%5E7.4%20%7C%208.x-777bb4.svg)](https://www.php.net/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Modern YouTube updates often make older Smart TVs slow, incompatible, or unable to play videos due to high RAM/CPU usage. **TV YouTube Lite** solves this by providing a high-speed, server-side alternative that works on almost any TV browser.
